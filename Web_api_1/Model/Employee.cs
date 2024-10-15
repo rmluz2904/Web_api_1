@@ -7,6 +7,7 @@ namespace Web_api_1.Model
     public class Employee
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; private set; }
         public string name { get; private set; }
         public int age { get; private set; }
