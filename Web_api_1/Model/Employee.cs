@@ -12,6 +12,7 @@ namespace Web_api_1.Model
         public int age { get; private set; }
         public string? photo { get; private set; }
 
+        public Employee() { }
         public Employee(string name, int age, string photo)
         {
             this.name = name ?? throw new ArgumentNullException(nameof(name));

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Web_api_1.Model;
 using Web_api_1.ViewModel;
@@ -16,6 +17,7 @@ namespace Web_api_1.Controllers
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Add([FromForm] EmployeeViewModel employeeView)
         {
@@ -30,6 +32,7 @@ namespace Web_api_1.Controllers
             return Ok("Funcionário adicionado com sucesso.");
         }
 
+        [Authorize]
         [HttpPost]
         [Route("{id}/download")]
         public IActionResult DownloadPhoto(int id)
@@ -41,6 +44,7 @@ namespace Web_api_1.Controllers
             return File(dataBytes, "image/png");
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
