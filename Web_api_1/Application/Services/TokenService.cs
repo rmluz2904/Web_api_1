@@ -3,9 +3,9 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Web_api_1.Model;
+using Web_api_1.Domain.Model;
 
-namespace Web_api_1.Services
+namespace Web_api_1.Application.Services
 {
     public class TokenService
     {
@@ -14,7 +14,7 @@ namespace Web_api_1.Services
             var key = Encoding.ASCII.GetBytes(Key.Secret);
             var tokenConfig = new SecurityTokenDescriptor
             {
-                Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]
+                Subject = new ClaimsIdentity(new Claim[]
                 {new Claim("employeeId", employee.id.ToString()),
                 }),
                 Expires = DateTime.UtcNow.AddHours(3),

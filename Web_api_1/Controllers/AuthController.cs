@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Web_api_1.Services;
 using Web_api_1.Model;
 using Web_api_1.ViewModel;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authorization;
+using Web_api_1.Application.Services;
 
 namespace Web_api_1.Controllers
 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Web_api_1.Model;
+using Web_api_1.Domain.Model;
 
 namespace Web_api_1.Infrastructure
 {

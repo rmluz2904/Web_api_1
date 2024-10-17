@@ -1,6 +1,6 @@
-﻿using Web_api_1.Model;
+﻿using Web_api_1.Domain.Model;
 
-namespace Web_api_1.Infrastructure
+namespace Web_api_1.Infrastructure.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Web_api_1.Model;
-using Web_api_1.ViewModel;
+using Web_api_1.Application.ViewModel;
+using Web_api_1.Domain.Model;
 
 namespace Web_api_1.Controllers
 {
