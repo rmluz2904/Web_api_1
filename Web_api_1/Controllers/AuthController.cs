@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Web_api_1.Model;
-using Web_api_1.ViewModel;
+using Web_api_1.Domain.Model;
+using Web_api_1.Application.ViewModel;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authorization;
 using Web_api_1.Application.Services;
@@ -17,7 +17,7 @@ namespace Web_api_1.Controllers
         {
             if (username =="Ricardo" && password == "123456")
             {
-                var token = TokenService.GenerateToken(new Model.Employee());
+                var token = TokenService.GenerateToken(new Domain.Model.Employee());
                 return Ok(token);
             }
             return BadRequest("Username or password invalid");

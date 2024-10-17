@@ -1,10 +1,11 @@
-﻿namespace Web_api_1.Domain.Model
-{
+﻿using Web_api_1.Domain.DTOS;
+
+namespace Web_api_1.Domain.Model;
     public interface IEmployeeRepository
     {
         void Add(Employee employee);
-        List<Employee> Get(int pageNumber, int pageQuantity);
+        List<EmployeeDTO> Get(int pageNumber, int pageQuantity);
         Employee? Get(int id);
 
     }
-}
+
