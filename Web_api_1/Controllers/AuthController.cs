@@ -17,7 +17,7 @@ namespace Web_api_1.Controllers
         {
             if (username =="Ricardo" && password == "123456")
             {
-                var token = TokenService.GenerateToken(new Domain.Model.Employee());
+                var token = TokenService.GenerateToken(new Domain.Model.EmployeeAggregate.Employee());
                 return Ok(token);
             }
             return BadRequest("Username or password invalid");

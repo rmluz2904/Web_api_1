@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Web_api_1.Application.ViewModel;
 using Web_api_1.Domain.DTOS;
-using Web_api_1.Domain.Model;
+using Web_api_1.Domain.Model.EmployeeAggregate;
 
 namespace Web_api_1.Controllers
 {

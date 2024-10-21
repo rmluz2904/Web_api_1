@@ -3,7 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Web_api_1.Domain.Model;
+using Web_api_1.Domain.Model.EmployeeAggregate;
 
 namespace Web_api_1.Application.Services
 {

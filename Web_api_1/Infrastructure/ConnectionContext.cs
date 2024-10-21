@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Web_api_1.Domain.Model;
+using Web_api_1.Domain.Model.EmployeeAggregate;
 
 namespace Web_api_1.Infrastructure
 {
