@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Asp.Versioning;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -6,10 +7,12 @@ using Web_api_1.Application.ViewModel;
 using Web_api_1.Domain.DTOS;
 using Web_api_1.Domain.Model.EmployeeAggregate;
 
-namespace Web_api_1.Controllers
+namespace Web_api_1.Controllers.V2
 {
     [ApiController]
-    [Route("api/v1/employee")]
+    [Route("api/v{version:apiVersion}/employee")]
+    [ApiVersion("2.0")]
+
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -50,7 +53,7 @@ namespace Web_api_1.Controllers
             return File(dataBytes, "image/png");
         }
 
-        
+
         [HttpGet]
         public IActionResult Get(int pageNumber, int pageQuantity)
         {
