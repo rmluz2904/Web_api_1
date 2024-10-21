@@ -44,6 +44,8 @@ namespace Web_api_1.Migrations
         {
             migrationBuilder.DropTable(
                 name: "employee");
+            migrationBuilder.DropTable(
+                name: "company");
         }
 
     }
